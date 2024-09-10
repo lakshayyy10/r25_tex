@@ -24,7 +24,7 @@ int main(int argc, char** argv) {
 	sabertooth = open_file(port_name_2, "w+");
 	
 	// read data from RC transmitter using sbus
-	read_SBUS(sbus_packet, uint8_t, 25, sbus);
+	read_SBUS(sbus_packet, 1, sizeof(sbus_packet), sbus);
 
 	// parsing sbus packet
 	channel = parse_buffer(sbus_packet);
