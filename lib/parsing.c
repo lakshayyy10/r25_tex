@@ -8,7 +8,7 @@ int interpolation(uint16_t channel) {
         int max_in=2047;
         int min_out =0;
         int max_out =127;
-int pwm = min_out + (channel - min_in) * (max_out - min_out) / (max_in - min_in);
+int pwm = 1 +min_out + (channel - min_in) * (max_out - min_out) / (max_in - min_in);
 
     // Ensure that the interpolated value is within the range of 0 to 127
     if (pwm < min_out) {
